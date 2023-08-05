@@ -1,6 +1,6 @@
 # Alchimia Vitae 炼金术自传
 粘液科技附属插件，增加了一些炼金术相关魔法、草药和物品。
-**[2021 Slimefun Addon Jam](https://github.com/Slimefun/Slimefun4/wiki/Addon-Jam-2021)**参赛作品。
+[2021 Slimefun Addon Jam](https://github.com/Slimefun/Slimefun4/wiki/Addon-Jam-2021)参赛作品。
 
 **该附属需要粘液科技RC-28或以上的版本以及Minecraft 1.17+和Java 16+**
 自行构建或前往Actions下载（懒
