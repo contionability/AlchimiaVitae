@@ -28,27 +28,28 @@ public class AlchimiaItems {
 
     // {{{ Menu items (for custom crafters)
     public static final ItemStack IN_BG = new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE,
-            AlchimiaUtils.format("<gradient:#ff68fc:#ff9a5c>Input</gradient>"));
+            AlchimiaUtils.format("<gradient:#ff68fc:#ff9a5c>输入</gradient>"));
 
     public static final ItemStack CRAFT_BTN = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE,
-            AlchimiaUtils.format("<gradient:#39f792:#5c95ff>Craft</gradient>"), "&aClick to craft");
+            AlchimiaUtils.format("<gradient:#39f792:#5c95ff>合成</gradient>"), "&a点击合成");
 
     public static final ItemStack CRAFT_BG = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE,
-            AlchimiaUtils.format("<gradient:#39f792:#5c95ff>Craft</gradient>"));
+            AlchimiaUtils.format("<gradient:#39f792:#5c95ff>合成</gradient>"));
 
     public static final ItemStack OUT_BG = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE,
-            AlchimiaUtils.format("<gradient:#5cb8ff:#39f7e1>Output</gradient>"));
+            AlchimiaUtils.format("<gradient:#5cb8ff:#39f7e1>输出</gradient>"));
     // }}}
 
     // {{{ Tools
     public static final SlimefunItemStack SOUL_COLLECTOR = new SlimefunItemStack("AV_SOUL_COLLECTOR",
-            Material.DIAMOND_SWORD, AlchimiaUtils.format("<gradient:#6baefa:#7145b0>Soul Collector</gradient>"),
-            "&bExtracts souls", "",
-            "&7Killed mobs will drop souls",
-            "&73x EXP drops from all mobs",
-            "&7Wither-related mobs will",
-            "&7drop additional souls",
-            "", AlchimiaUtils.itemType("Tool"));
+            Material.DIAMOND_SWORD, AlchimiaUtils.format("<gradient:#6baefa:#7145b0>灵魂收割者</gradient>"),
+            "&b收集灵魂", "",
+            "&7使用这把剑击杀任何生物",
+            "&7都会掉落灵魂",
+            "&7可获得3倍经验掉落",
+            "&9凋灵类生物将掉落更多灵魂",
+            "",
+            AlchimiaUtils.itemType("Tool"));
 
     static {
         ItemMeta meta = SOUL_COLLECTOR.getItemMeta();
@@ -61,20 +62,22 @@ public class AlchimiaItems {
 
     // {{{ Machines
     public static final SlimefunItemStack PLANT_INFUSION_CHAMBER = new SlimefunItemStack("AV_PLANT_INFUSION_CHAMBER",
-            Material.LIME_STAINED_GLASS, AlchimiaUtils.format("<gradient:#549c64:#1de078>Plant Infusion Chamber</gradient>"),
-            "&bInfuses plants with dark",
-            "&bor light energy using",
-            "&bMagical Lumps and Souls", "",
+            Material.LIME_STAINED_GLASS, AlchimiaUtils.format("<gradient:#549c64:#1de078>植物注入仓</gradient>"),
+            "&b使用魔法结晶",
+            "&b或者凝魂",
+            "&b为植物注入光能量或暗能量",
+            "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(1),
             LoreBuilder.powerPerSecond(64),
-            "", AlchimiaUtils.itemType("Machine"));
+            "",
+            AlchimiaUtils.itemType("Machine"));
 
     public static final SlimefunItemStack EXP_CRYSTALLIZER = new SlimefunItemStack("AV_EXP_CRYSTALLIZER",
             Material.LIME_STAINED_GLASS,
-            AlchimiaUtils.format("<gradient:#50fa75:#3dd2ff>Experience Crystallizer</gradient>"),
-            "&aForms experience into a crystalline,",
-            "&adurable, and stable form", "",
+            AlchimiaUtils.format("<gradient:#50fa75:#3dd2ff>经验结晶器</gradient>"),
+            "&a将经验纯化为洁净的晶体",
+            "&a持久且稳定", "",
             LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
             LoreBuilder.speed(1),
             LoreBuilder.powerPerSecond(32),
@@ -83,10 +86,10 @@ public class AlchimiaItems {
 
     // {{{ Resources
     public static final SlimefunItemStack CONDENSED_SOUL = new SlimefunItemStack("AV_CONDENSED_SOUL",
-            Material.LIGHT_BLUE_DYE, AlchimiaUtils.format("<gradient:#6baefa:#7145b0>Condensed Soul</gradient>"),
-            "&bA soul, condensed into an orb",
-            "&9&oPerhaps there is a way",
-            "&9&oto manipulate its power...",
+            Material.LIGHT_BLUE_DYE, AlchimiaUtils.format("<gradient:#6baefa:#7145b0>凝魂</gradient>"),
+            "&b一个灵魂，凝聚成球的灵魂",
+            "&9&o也许有什么方法",
+            "&9&o可以利用它的力量...",
             "", AlchimiaUtils.itemType("Raw Magic Resource"));
 
     static {

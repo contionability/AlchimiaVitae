@@ -1,10 +1,10 @@
 options:
-  # Whether or not to automatically update
-  auto-update: true
+  # 是否启用自动更新 默认关闭
+  auto-update: false
 
-  # Options for Infusions
+  # 注入魔法设置
   infusions:
-    # Enable or disable specific Infusions (true = enabled, false = disabled)
+    # 设置指定类型魔法启用或者禁用
     infusion-destructivecrits: true
     infusion-phantomcrits: true
     infusion-trueaim: true
@@ -15,78 +15,70 @@ options:
     infusion-totemstorage: true
     infusion-knockback: true
 
-  # Options for transmutations
+  # 元素转化选项
   transmutations:
-    # Enable or disable specific transmutations (true = enabled, false = disabled)
+    # 开启或关闭指定的元素转化
+    # 强化合金锭
     reinforced-transmutation: true
+    # 硬化金属
     hardened-transmutation: true
+    # 钢锭
     steel-transmutation: true
+    # 大马士革钢锭
     damascus-transmutation: true
+    # 压缩碳
     compressed-carbon-transmutation: true
-    # Whether or not the display items in the Slimefun Guide should use the same
-    # custom model data as the real Slimefun items that will be crafted
+    # 是否使用相同的custom model data（用于自定义材质包）
+    # true 直接使用粘液科技原版（指的是插件原版）对应物品的 model data
+    # false AlchimiaVitae model data
     use-same-custommodeldata: true
 
-  # Options for potions
+  # 自定义药水效果和强度
   potions:
-    # Options for the Benevolent Brew potion
+    # 仁慈酿造
     benevolent-brew:
-      # Effect configurations
-      # NOTE: To set the duration of the potions in seconds, multiply the amount of seconds by 20 and put that value in
+      # 自定义药水效果
+      # NOTE: ticks(gt)对应秒的换算方式为：20ticks = 1秒
+      # xxx: 指定药水效果
+      #   ticks: 指定持续时间（游戏刻）
+      #   level: 指定效果等级（1级即为1级而非2级，别问，问就是玩命令玩的）
+      #
+      # NOTE:
+      #   - 抗性提升计算公式：伤害减免量 = level * 20%，因此5级即可免疫伤害
+      #   - 其它详见Minecraft Wiki
       resistance:
-        # How many game ticks (there are 20 game ticks in a second) the effect should last
         ticks: 6000
-        # The level of the effect (resistance 5 and above will make players completely immune to damage)
         level: 1
       haste:
-        # How many game ticks (there are 20 game ticks in a second) the effect should last
         ticks: 6000
-        # The level of the effect
         level: 2
       regen:
-        # How many game ticks (there are 20 game ticks in a second) the effect should last
         ticks: 6000
-        # The level of the effect
         level: 2
       speed:
-        # How many game ticks (there are 20 game ticks in a second) the effect should last
         ticks: 6000
-        # The level of the effect
         level: 2
       jump:
-        # How many game ticks (there are 20 game ticks in a second) the effect should last
         ticks: 6000
-        # The level of the effect
         level: 2
 
-      # How many half hearts of absorption to grant upon consuming the potion (has to be in this format: 0.0, 1.0, etc.)
-      absorption-halfhearts: 0.0
-    # Options for the Malevolent Concoction splash potion
+      # 自定义药水的伤害吸收数值（虽然有小数位，但格式为：0.0 1.0 2.0 ... 以此类推，对应的是血量值（2血量 = 1颗心）
+      absorption-halfhearts: 6.0
+    # 恶毒混合物（喷溅型药水）
     malevolent-concoction:
-      # Effect configurations
-      # NOTE: To set the duration of the potions in seconds, multiply the amount of seconds by 20 and put that value in
+      # 自定义药水效果
       weakness:
-        # How many game ticks (there are 20 game ticks in a second) the effect should last
         ticks: 6000
-        # The level of the effect
         level: 3
       slowness:
-        # How many game ticks (there are 20 game ticks in a second) the effect should last
         ticks: 3000
-        # The level of the effect
         level: 2
       poison:
-        # How many game ticks (there are 20 game ticks in a second) the effect should last
         ticks: 600
-        # The level of the effect
         level: 2
       blindness:
-        # How many game ticks (there are 20 game ticks in a second) the effect should last
         ticks: 1200
-        # The level of the effect
         level: 1
       hunger:
-        # How many game ticks (there are 20 game ticks in a second) the effect should last
         ticks: 600
-        # The level of the effect
         level: 2
